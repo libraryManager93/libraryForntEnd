@@ -1,0 +1,29 @@
+.dark{
+    background-color:#212121;
+}
+
+.headerFont{
+font-family: 'Roboto', sans-serif;
+font-weight: bold;
+font-size: 28px;
+color:white;
+margin: 0 20px 0 20px;
+}
+
+.headerLogo{
+        height: 50px;
+    width: 50px;
+    margin: 0 0 0 20px;
+}
+
+.search{
+      min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 15px;
+  margin-top:20px;
+  color: white;
+}
+.input{
+    color: white;
+}

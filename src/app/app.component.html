@@ -1,0 +1,26 @@
+<app-header></app-header>
+    <p>https://stackoverflow.com/questions/40915277/change-built-in-colors</p>
+<div *ngIf="router.url != '/viewBook'" class="example-container mat-elevation-z8">
+    <mat-paginator #paginator [length]="booksLength"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              (page)="onPaginateChange($event)">
+</mat-paginator>
+  <mat-card>
+    <!--<img src="https://covers.openlibrary.org/b/olid/OL13520308M.jpg" style="max-width:100%;" alt="TEST">-->
+<app-home routerLink="/viewBook" *ngFor="let b of display" 
+[hidden]="pageeHidden" (bookSelected)="onSelectBook($event)"
+[book]="b" [test]="test"></app-home>
+
+<p *ngIf="loaderVisible">Loading Page..</p>
+
+</mat-card>
+ <mat-paginator #paginator [length]="booksLength"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              (page)="onPaginateChange($event)">
+</mat-paginator>
+</div>
+ <router-outlet> </router-outlet>
+
+

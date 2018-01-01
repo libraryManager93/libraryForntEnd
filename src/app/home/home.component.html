@@ -1,0 +1,17 @@
+
+<mat-card class="card" (click)="onBookSelect()">
+ <img class="cover" mat-card-image [src]="imageSrc" [hidden]="imageHidden" 
+ (load)="OnImageLoad()" alt="Preview Not Available">
+  <p *ngIf="loaderVisible">Loading image..</p>
+<mat-card-content>
+     <mat-card-title >{{book.title_suggest}}</mat-card-title>
+</mat-card-content>
+
+ <!--<mat-card-actions>
+     <button mat-raised-button color="primary">BORROW</button>
+ </mat-card-actions>-->
+
+
+</mat-card>
+
+

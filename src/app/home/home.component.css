@@ -1,0 +1,53 @@
+/*.cover{
+display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto
+}*/
+
+@media screen and (max-width:1024px){
+  img.cover {width: 100px;
+  padding: 10px;
+  margin: 10px;
+  }
+
+  
+}
+
+@media screen and (min-width:1025px){
+  img.cover{
+      min-width: 180px;
+    max-height: 250px;
+      cursor: pointer;  
+  
+  }
+  mat-card-actions{
+       position: absolute;
+    bottom: 20px;
+  }
+  .card {
+    
+      overflow:auto; 
+      position: relative;
+      max-width: 180px;
+     margin:10px 10px 10px 25px;
+     float:left;
+     max-height: 400px;
+     min-height: 280px;
+}
+
+
+  mat-card-title{
+    margin: 2px;
+    font-size: 15px;
+     font-weight: bold;
+       cursor: pointer;
+}
+
+mat-card-content{
+    margin:5px;
+}
+}
+
+img.cover{height: auto;}

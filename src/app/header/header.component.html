@@ -1,0 +1,25 @@
+<mat-toolbar class="dark">
+
+   <img class="headerLogo" src="./assets/images/libraryLogo.png">
+  <span class="headerFont">LIBRARY</span>
+
+  <form class="search">
+  <mat-form-field class="example-full-width">
+    
+    <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" 
+    [formControl]="stateCtrl" class="input">
+    <mat-autocomplete #auto="matAutocomplete">
+
+      <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+        <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
+        <span>{{ state.name }}</span> |
+        <small>Population: {{state.population}}</small>
+      </mat-option>
+
+    </mat-autocomplete>
+
+  </mat-form-field>
+
+  <br/>
+</form>
+</mat-toolbar>
